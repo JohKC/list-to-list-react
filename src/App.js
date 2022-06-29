@@ -1,24 +1,21 @@
-import logo from './logo.svg';
 import './App.css';
+import ListToListProvider from './ListToListContext';
+import People from './People';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div className={`
+        bg-blue-700 h-20 flex items-center 
+        justify-center text-white`}>
+        <h1 className='text-2xl'>List to List</h1>
+      </div>
+      <div className="container mt-4 mx-auto flex justify-center">
+        <ListToListProvider>
+          <People />
+        </ListToListProvider>
+      </div>
+    </>
   );
 }
 
